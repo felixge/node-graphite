@@ -1,0 +1,19 @@
+{
+  "author": "Felix Geisendörfer <felix@debuggable.com> (http://debuggable.com/)",
+  "name": "graphite",
+  "description": "A node.js client for graphite.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/felixge/node-graphite",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/felixge/node-graphite.git"
+  },
+  "main": "./index",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "request": "2.1.1"
+  },
+  "devDependencies": {}
+}
