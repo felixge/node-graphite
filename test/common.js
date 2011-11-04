@@ -1,4 +1,9 @@
 var common = exports;
+var path   = require('path');
 
-common.graphite = require('..');
-common.config = require('./config');
+common.dir      = {}
+common.dir.root = path.dirname(__dirname);
+common.dir.lib  = path.join(common.dir.root, 'lib');
+
+common.graphite = require(common.dir.root);
+common.config   = require('./config');
