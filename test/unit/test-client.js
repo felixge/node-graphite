@@ -17,7 +17,7 @@ test('write', {
     client = new CarbonClient(new SocketDummy());
   },
 
-  'single write': function() {
+  'with single payload': function() {
     client.write('foo.bar', 25);
     assert.equal(client.socket._writes.length, 1);
 
@@ -27,7 +27,7 @@ test('write', {
     assert.equal(args[2], undefined);
   },
 
-  'single write with callback': function() {
+  'with single payload and callback': function() {
     var cb     = function() {};
 
     client.write('foo.bar', 25, cb);
@@ -38,7 +38,7 @@ test('write', {
     assert.equal(args[2], cb);
   },
 
-  'test single write with timestamp': function() {
+  'with single payload and timestamp': function() {
     var cb     = function() {};
 
     client.write('foo.bar', 25, 2001, cb);
@@ -48,7 +48,7 @@ test('write', {
     assert.ok(/^foo\.bar 25 2\n/.test(args[0]), args[0]);
     assert.equal(args[2], cb);
   },
-  'batch write': function() {
+  'with multiple payloads and callback': function() {
     var cb     = function() {};
 
     client.write([
