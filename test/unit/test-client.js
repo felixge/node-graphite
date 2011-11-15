@@ -48,6 +48,7 @@ test('write', {
     assert.ok(/^foo\.bar 25 2\n/.test(args[0]), args[0]);
     assert.equal(args[2], cb);
   },
+
   'with multiple payloads and callback': function() {
     var cb     = function() {};
 
