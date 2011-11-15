@@ -14,7 +14,7 @@ SocketDummy.prototype.write = function() {
 var client;
 test('write', {
   before: function() {
-    client = new CarbonClient(new SocketDummy());
+    client = new CarbonClient({socket: new SocketDummy()});
   },
 
   'with single payload': function() {
