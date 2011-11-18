@@ -6,4 +6,3 @@ common.dir.root = path.dirname(__dirname);
 common.dir.lib  = path.join(common.dir.root, 'lib');
 
 common.graphite = require(common.dir.root);
-common.config   = require('./config');
