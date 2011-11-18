@@ -2,9 +2,9 @@
 
 A node.js client for graphite.
 
-## Is it any good?
+## Install
 
-Try it : ).
+This is not ready for you yet
 
 ## Usage
 
@@ -12,20 +12,17 @@ Sending data:
 
 ```js
 var graphite = require('graphite');
-var carbonClient = graphite.createCarbonClient('plaintext://your-graphite-host/');
+var client = graphite.createClient('plaintext://graphite.example.org:2003/');
 
-var key = 'foo.bar.baz';
-var value = 23;
-carbonClient.write(key, value, function(err) {
-  if (err) throw err;
+var metrics = {foo: 23};
+carbonClient.write(metrics, function(err) {
+  // if err is null, your data was sent to graphite!
 });
 ```
 
 ## Todo
 
 * More docs
-* Maybe implement the pickle / AMQP protocols for sending data
-* Unit tests
 
 ## License
 
