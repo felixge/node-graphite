@@ -9,6 +9,9 @@
     "url": "git://github.com/felixge/node-graphite.git"
   },
   "main": "./index",
+  "scripts": {
+    "test": "make test"
+  },
   "engines": {
     "node": "*"
   },
