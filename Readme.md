@@ -1,5 +1,7 @@
 # graphite
 
+[![Build Status](https://secure.travis-ci.org/felixge/node-graphite.png)](http://travis-ci.org/felixge/node-graphite)
+
 A node.js client for graphite.
 
 ## Install
