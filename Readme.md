@@ -6,7 +6,9 @@ A node.js client for graphite.
 
 ## Install
 
-This is not ready for you yet
+```
+npm install graphite
+```
 
 ## Usage
 
