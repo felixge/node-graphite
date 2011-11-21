@@ -73,11 +73,12 @@ test('GraphiteClient', {
   '#write passes the current time to carbon': function() {
     client.write({});
 
-    assert.ok(carbon.write.getCall(0).args[1] >= Date.now());
+    var now = Math.floor(Date.now() / 1000);
+    assert.ok(carbon.write.getCall(0).args[1] >= now);
   },
 
   '#write lets you pass a timestamp to carbon': function() {
-    client.write({}, 23);
+    client.write({}, 23000);
 
     assert.equal(carbon.write.getCall(0).args[1], 23);
   },
