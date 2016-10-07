@@ -16,7 +16,7 @@
     "node": "*"
   },
   "dependencies": {
-    "request": "2.1.1",
+    "request": "2.75.0",
     "lazy-socket": "0.0.3"
   },
   "devDependencies": {
