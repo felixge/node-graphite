@@ -24,6 +24,19 @@ client.write(metrics, function(err) {
 });
 ```
 
+Sending data with tags:
+
+```js
+var graphite = require('graphite');
+var client = graphite.createClient('plaintext://graphite.example.org:2003/');
+
+var metrics = {foo: 23};
+var tags = {'name': 'foo.bar', 'some.fancy.tag': 'somefancyvalue'};
+client.writeTagged(metrics, tags, function(err) {
+  // if err is null, your data was sent to graphite!
+});
+```
+
 ## Todo
 
 * More docs
