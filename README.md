@@ -38,6 +38,16 @@ client.write(metrics, timestamp, function(err) {
 });
 ```
 
+In Graphite [1.1.1 (21.12.17)](http://graphite.readthedocs.io/en/latest/releases/1_1_1.html), [tagging](http://graphite.readthedocs.io/en/latest/tags.html) becomes available. You can send tagged metrics as follows:
+
+```js
+var metrics = {foo: 23};
+var tags = {'name': 'foo.bar', 'some.fancy.tag': 'somefancyvalue'};
+client.writeTagged(metrics, tags, function(err) {
+  // if err is null, your data was sent to graphite!
+});
+```
+
 ## Todo
 
 * More docs
