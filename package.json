@@ -15,10 +15,10 @@
     "test:integration": "make test type=integration"
   },
   "engines": {
-    "node": "*"
+    "node": ">=4 <10"
   },
   "dependencies": {
-    "request": "2.1.1",
+    "request": "2.87.0",
     "lazy-socket": "0.0.3"
   },
   "devDependencies": {
