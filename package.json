@@ -15,15 +15,14 @@
     "test:integration": "make test type=integration"
   },
   "engines": {
-    "node": ">=4 <10"
+    "node": ">=4"
   },
   "dependencies": {
-    "request": "2.87.0",
     "lazy-socket": "0.0.3"
   },
   "devDependencies": {
-    "urun": "0.0.3",
-    "utest": "0.0.2",
-    "sinon": "1.2.0"
+    "sinon": "~7.1.1",
+    "urun": "0.0.8",
+    "utest": "0.0.8"
   }
 }
