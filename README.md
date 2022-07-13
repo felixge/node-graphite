@@ -1,6 +1,6 @@
 # graphite
 
-[![Build Status](https://secure.travis-ci.org/felixge/node-graphite.png)](http://travis-ci.org/felixge/node-graphite)
+[![Node.js CI](https://github.com/felixge/node-graphite/actions/workflows/node.js.yml/badge.svg)](https://github.com/felixge/node-graphite/actions/workflows/node.js.yml)
 
 A node.js client for graphite.
 
