@@ -17,9 +17,6 @@
   "engines": {
     "node": ">=4"
   },
-  "dependencies": {
-    "lazy-socket": "0.0.3"
-  },
   "devDependencies": {
     "sinon": "~7.1.1",
     "urun": "0.0.8",
