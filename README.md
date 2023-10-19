@@ -16,7 +16,10 @@ You first have to define the Graphite client:
 
 ```js
 var graphite = require('graphite');
-var client = graphite.createClient('plaintext://graphite.example.org:2003/');
+// TCP
+var client = graphite.createClient('tcp://graphite.example.org:2003/');
+// UDP
+var client = graphite.createClient('udp://graphite.example.org:2003/');
 ```
 
 You can send metrics without a timestamp. The current Unix epoch will then be used in place:
@@ -24,7 +27,7 @@ You can send metrics without a timestamp. The current Unix epoch will then be us
 ```js
 var metrics = {foo: 23};
 client.write(metrics, function(err) {
-  // if err is null, your data was sent to graphite!
+  // if err is null (UDP) or undefined (TCP), your data was sent to graphite!
 });
 ```
 
@@ -34,7 +37,7 @@ If you wish to set your own timestamp, you must use `Date.now()` (millisecond pr
 var metrics = {foo: 23};
 var timestamp = Date.now();
 client.write(metrics, timestamp, function(err) {
-  // if err is null, your data was sent to graphite!
+  // if err is null (UDP) or undefined (TCP), your data was sent to graphite!
 });
 ```
 
@@ -44,7 +47,7 @@ In Graphite [1.1.1 (21.12.17)](http://graphite.readthedocs.io/en/latest/releases
 var metrics = {foo: 23};
 var tags = {'name': 'foo.bar', 'some.fancy.tag': 'somefancyvalue'};
 client.writeTagged(metrics, tags, function(err) {
-  // if err is null, your data was sent to graphite!
+  // if err is null (UDP) or undefined (TCP), your data was sent to graphite!
 });
 ```
 
